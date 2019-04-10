@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { withRouter } from 'react-router';
+import posed from 'react-pose'
 
 import './TopPage.css';
 
@@ -13,7 +15,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 import LaptopChromebookOutlined from '@material-ui/icons/LaptopChromebookOutlined'
 
-import posed from 'react-pose'
 
 import '../component/Prompt_card/Prompt_card'
 import Prompt_card from '../component/Prompt_card/Prompt_card';
@@ -31,7 +32,7 @@ class TopPage extends Component{
     }
   }
   trans_page = () => {
-
+    this.props.history.push('/watch')
   }
   shake_state = () => {
     setInterval(() => {
@@ -68,4 +69,4 @@ class TopPage extends Component{
   }
 }
 
-export default TopPage;
+export default withRouter(TopPage);

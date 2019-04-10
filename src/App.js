@@ -3,6 +3,7 @@ import { BrowserRouter, Route, withRouter, Link } from 'react-router-dom'
 
 import TopPage from './TopPage/TopPage'
 import InductionToMobile from './InductionToMobile/InductionToMobile'
+import WatchSintyoku from './WatchSintyoku/WatichSintyoku'
 
 class App extends Component {
   componentDidMount() {
@@ -24,8 +25,9 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div id="App">
-          <Route path='/' render={ () => <TopPage /> } />
+          <Route exact path='/' render={ () => <TopPage /> } />
           <Route path='induction' render={ () => <InductionToMobile />} />
+          <Route path='Watch' render={ () => <WatchSintyoku />} />
         </div>
       </BrowserRouter>
     );
