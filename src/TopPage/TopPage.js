@@ -23,12 +23,17 @@ const Box = posed.div({
   visible: { rotate: 5 },
   hidden: { rotate: -5 }
 });
+const Monitor = posed.div({
+  stay: { top: '50%', left: '50%', width: '60vw', height: '60vw', color: 'black', fontSize: '1em' },
+  go: { top: '50%', left: '50%', width: '200%', height: '200%', transition: {eace: 'circIn', duration:1000}, fontSize: '-10em' }
+});
 
 class TopPage extends Component{
   constructor() {
     super();
     this.state = {
-      isVisible: false
+      isVisible: false,
+      routing_trigger: false
     }
   }
   trans_page = () => {
@@ -48,10 +53,14 @@ class TopPage extends Component{
     setInterval(() => {
       this.second_shake_state()
     }, 700);
+    setInterval(() => {
+      this.setState({ routing_trigger: !this.state.routing_trigger });
+    }, 700);
   }
   render(){
     return(
       <div>
+        {/*
         <AppBar id="AppBar" colorPrimary="#5E4B4B" position="static">
           <Toolbar>
             <IconButton color="inherit" aria-label="Menu">
@@ -59,10 +68,11 @@ class TopPage extends Component{
             </IconButton>
           </Toolbar>
         </AppBar>
-        <div id="Circle-ad" onClick={this.trans_page} >
+        */}
+        <Monitor pose={this.state.routing_trigger ? 'go' : 'stay'} id="Circle-ad" onClick={this.trans_page} >
           <Box className="box" pose={this.state.isVisible ? 'visible' : 'hidden'}><LaptopChromebookOutlined id="phone-icon" fontSize="large"/></Box>
           <div id="start"><h3>はじめる</h3></div>
-        </div>
+        </Monitor>
         {/*<Prompt_card />*/}
       </div>
     );
