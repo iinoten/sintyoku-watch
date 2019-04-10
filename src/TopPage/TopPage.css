@@ -1,0 +1,64 @@
+html body {
+  background-color: #FFF2B8
+}
+#phone-icon {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: 
+    translateY(-50%)
+    translateX(-50%);
+  }
+#AppBar {
+  background-color: #5E4B4B;
+}
+#Circle-ad {
+  height: 60vw;
+  width: 60vw;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: 
+    translateY(-50%)
+    translateX(-50%);
+  
+    box-shadow:3px 3px 11px -1px rgba(0,0,0,0.2);
+}
+#ask {
+  margin: 0px 10px;
+}
+@import url(https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c);
+h3 {
+  font-family: "M PLUS Rounded 1c";
+  font-size: 1．5em;
+  color: black;
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+h2 {
+  font-family: "Roboto";
+  color: black;
+  font-size: 1.7em;
+}
+#start {
+  position: absolute;
+  top: 87%;
+  left: 50%;
+  transform: 
+    translateY(-50%)
+    translateX(-50%);
+  -ms-transform: 
+    translateY(-50%)
+    translateX(-50%);
+}
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: 
+    translateY(-50%)
+    translateX(-50%);
+}
